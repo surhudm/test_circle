@@ -1,0 +1,10 @@
+dependencies:
+  override:
+    - sudo curl -LOs https://downloads.globus.org/toolkit/globus-connect-server/globus-connect-server-repo_latest_all.deb
+    - sudo dpkg -i globus-connect-server-repo_latest_all.deb
+    - sudo apt-get update
+    - sudo apt-get install globus-connect-server
+
+test:
+  override:
+    - cat README.md
